@@ -15,7 +15,11 @@ import MediaPage from '../containers/Admin/Media/Loadable';
 import SliderPage from '../containers/Admin/Slider/Loadable';
 import SliderAddEdit from '../containers/Admin/Slider/AddEditPage/Loadable';
 import BlogManagePage from '../containers/Admin/Blog/Loadable';
+import NewsManagePage from '../containers/Admin/News/Loadable';
+
 import BlogManageAddEdit from '../containers/Admin/Blog/AddEditPage/Loadable';
+import NewsManageAddEdit from '../containers/Admin/News/AddEditPage/Loadable';
+
 import SubscribePage from '../containers/Admin/Subscribe/Loadable';
 import SubscribeViewPage from '../containers/Admin/Subscribe/SubscribeView';
 import ContactListPage from '../containers/Admin/Contact/Loadable';
@@ -24,9 +28,15 @@ import TemplateListingPage from '../containers/Admin/Template/Loadable';
 import ErrorManagePage from '../containers/Admin/Error/Loadable';
 import FaqCatAddEditPage from '../containers/Admin/FaqCategory';
 import BlogCatManagePage from '../containers/Admin/BlogCategory/Loadable';
+import NewsCatManagePage from '../containers/Admin/NewsCategory/Loadable';
+
 import BlogCommentManagePage from '../containers/Admin/Comment/Loadable';
+// import NewsCommentManagePage from '../containers/Admin/Comment/Loadable';
+
 import ViewCommentManagePage from '../containers/Admin/Comment/ViewComment/Loadable';
 import BlogCatAddEditPage from '../containers/Admin/BlogCategory/AddEdit/Loadable';
+import NewsCatAddEditPage from '../containers/Admin/NewsCategory/AddEdit/Loadable';
+
 import Report from '../containers/Admin/Report/Loadable';
 import Integration from '../containers/Admin/Integration/Loadable';
 import UserProfilePage from '../containers/Admin/Profile/index';
@@ -155,6 +165,45 @@ const routes = [
     component: SliderPage,
     exact: true,
   },
+  {
+    path: '/admin/news-manage/edit/:id',
+    component: NewsManageAddEdit,
+    exact: true,
+  },
+  {
+    path: '/admin/news-manage/add',
+    component: NewsManageAddEdit,
+    exact: true,
+  },
+  {
+    path: '/admin/news-manage',
+    component: NewsManagePage,
+    exact: true,
+  },
+
+  {
+    path: '/admin/news-cat-manage/edit/:slug',
+    component: NewsCatAddEditPage,
+    exact: true,
+  },
+  {
+    path: '/admin/news-cat-manage/add',
+    component: NewsCatAddEditPage,
+    exact: true,
+  },
+  {
+    path: '/admin/news-cat-manage',
+    component: NewsCatManagePage,
+    exact: true,
+  },
+  // {
+  //   path: '/admin/blog-comment-manage',
+  //   component: BlogCommentManagePage,
+  //   exact: true,
+  // },
+
+
+
   {
     path: '/admin/blog-manage/edit/:id',
     component: BlogManageAddEdit,
