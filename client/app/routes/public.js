@@ -10,6 +10,7 @@ import SubscribePage from '../containers/SubscriberPage/Loadable';
 import StaticPage from '../containers/StaticPages/Loadable';
 import EditorFileSelectPage from '../containers/EditorFileSelect';
 import BlogPages from '../containers/Blog';
+import NewsPages from '../containers/News';
 import VerifyEmail from '../containers/VerifyEmail/Loadable';
 
 const publicRoutes = [
@@ -57,6 +58,11 @@ const publicRoutes = [
     exact: false,
     path: '/blog',
     component: BlogPages,
+  },
+  {
+    exact: false,
+    path: '/news',
+    component: NewsPages,
   },
   {
     exact: true,
